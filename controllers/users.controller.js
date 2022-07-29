@@ -9,6 +9,7 @@ const getAllUsers = (req, res) => {
     })
 };
 
+
 // create users 
 const createUsers = (req, res) => {
     const newUser = {
@@ -20,6 +21,7 @@ const createUsers = (req, res) => {
     users.push(newUser);
     res.status(200).json(users);
 };
+
 
 // update users 
 const updateUsers = (req, res) => {
