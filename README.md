@@ -87,3 +87,11 @@ const PORT = process.env.PORT || 4000;
 ```javascript
 PORT=4000
 ```
+
+
+## Heroku 
+
+- create a `Procfile` and inside the Procfile,
+```javascript
+web: node index.js
+```
