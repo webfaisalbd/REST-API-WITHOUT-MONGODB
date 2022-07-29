@@ -73,3 +73,17 @@ const deleteUsers = (req, res) => {
 ```
 
 ---
+
+
+## .env
+
+- index.js
+```javascript
+require("dotenv").config();
+const PORT = process.env.PORT || 4000;
+```
+
+- .env file
+```javascript
+PORT=4000
+```
