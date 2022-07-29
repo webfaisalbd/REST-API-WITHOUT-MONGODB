@@ -3,18 +3,13 @@ const { v4: uuidv4 } = require("uuid");
 const users = [
     {
         id: uuidv4(),
-        username: "Faisal Ahmed",
-        email: "web.faisal.bd@gmail.com"
+        username: "faisal",
+        email: "faisal@gmail.com"
     },
     {
         id: uuidv4(),
-        username: "Tasnim",
-        email: "tas.@gmail.com"
-    },
-    {
-        id: uuidv4(),
-        username: "Anisul Islam",
-        email: "anis@gmail.com"
+        username: "tamim",
+        email: "tamim.@gmail.com"
     }
 ];
 
