@@ -26,14 +26,25 @@ const updateUsers = (req, res) => {
     const userId = req.params.id;
     const { username, email } = req.body;
     users.filter((user) => user.id == userId).map((selectedUser) => {
-            selectedUser.username = username;
-            selectedUser.email = email;
-        });
-    
+        selectedUser.username = username;
+        selectedUser.email = email;
+    });
+
     res.status(200).json({
         users
     });
 };
 
 
-module.exports = { getAllUsers, createUsers, updateUsers };
+// delete users 
+const deleteUsers = (req, res) => {
+    const userId = req.params.id;
+    users = users.filter((user) => user.id != userId);
+
+    res.status(202).json({
+        users
+    })
+};
+
+
+module.exports = { getAllUsers, createUsers, updateUsers, deleteUsers };
