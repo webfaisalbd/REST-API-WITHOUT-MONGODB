@@ -15,13 +15,25 @@ const createUsers = (req, res) => {
         id: uuidv4(),
         username: req.body.username,
         email: req.body.email,
-        
+
     };
     users.push(newUser);
     res.status(200).json(users);
 };
 
+// update users 
+const updateUsers = (req, res) => {
+    const userId = req.params.id;
+    const { username, email } = req.body;
+    users.filter((user) => user.id == userId).map((selectedUser) => {
+            selectedUser.username = username;
+            selectedUser.email = email;
+        });
+    
+    res.status(200).json({
+        users
+    });
+};
 
 
-
-module.exports = { getAllUsers, createUsers };
+module.exports = { getAllUsers, createUsers, updateUsers };
