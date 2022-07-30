@@ -95,3 +95,10 @@ PORT=4000
 ```javascript
 web: node index.js
 ```
+
+
+## After Heroku Publish, Change Data, And Again Heroku Push
+
+- git add .
+- git commit -m"again update data"
+- git push heroku main/master
