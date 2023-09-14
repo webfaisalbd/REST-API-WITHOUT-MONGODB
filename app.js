@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const userRouter = require('./routes/user.route');
+const { createUser } = require('./controllers/user.controller');
 
 
 
@@ -17,6 +18,8 @@ const userRouter = require('./routes/user.route');
 // api/users -> GET
 // api/users/:id -> GET
 // api/users/ -> POST
+// api/users/:id -> PUT
+// api/users/:id -> DELETE
 
 app.use('/api/users', userRouter);
 
